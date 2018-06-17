@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="client">
+   <resultMap type="cliVO" id="cliResult">
+        <id     property="client_pk" column="client_pk" />
+        
+        <result property="client_pk" column="client_pk" />
+        <result property="id" 		 column="id" 		/>
+		<result property="pw"      	 column="pw"    	/>
+		<result property="name" 	 column="name"      />
+		<result property="address"   column="address"   />
+		<result property="gender"    column="gender"  	/>
+       	<result property="tel"    	 column="tel" 	 	/>
+       	<result property="age"    	 column="age" 	 	/>
+       	<result property="point"     column="point"  	/>
+    </resultMap>  
+
+    <insert id="insertClient" parameterType="cliVO" > 
+        insert into client
+        	(id, pw, name, address, gender, tel, age)
+        values
+        	(#{id}, #{pw}, #{name}, #{address}, #{gender}, #{tel}, #{age})
+    </insert>
+    
+     <select id="selectClient" parameterType="cliVO" resultMap="cliResult"> 
+        select
+        	id, pw, name, address, gender, tel, age, point
+        from 
+        	client
+        where
+        	id = #{id} and pw = #{pw}
+    </select>
+    
+</mapper>

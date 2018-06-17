@@ -1,0 +1,13 @@
+@CHARSET "UTF-8";
+
+#login-wrap
+{
+	text-align:left;
+	width:800px;
+	margin:0 auto
+}
+
+.submit
+{
+	text-align:right;
+}

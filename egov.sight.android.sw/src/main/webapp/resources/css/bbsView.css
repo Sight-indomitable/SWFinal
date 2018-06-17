@@ -1,0 +1,41 @@
+@CHARSET "UTF-8";
+
+#bbsViewWrap
+{
+	text-align:justify;
+	width:900px;
+	margin:0 auto;
+}
+
+.user_id
+{
+	float:right;
+}
+
+.user_id:after
+{
+	content : "";
+	display : block;
+	clear   : both;
+}
+
+#bbsView
+{
+	width : inherit;
+}
+
+.bbs-content
+{
+	height   : 600px;
+	overflow : auto;
+	width    : 99%;
+	padding  : -10px;
+	border   : none;
+	resize   : none;
+}
+
+#bbnEditBtn
+{
+	text-align    : right;
+	margin-bottom : 100px;
+}

@@ -1,0 +1,14 @@
+@CHARSET "UTF-8";
+
+#wrap
+{
+	width:1250px;
+	margin : 0 auto;
+}
+
+.hidden{position: absolute; top: 0; left: -9999em;}
+.left-align{text-align: left;}
+.right-align{text-align: right;}
+.center-align{text-align: center;}  
+.justify-align{text-align: justify;}/*양측 정렬*/
+.text-bold{font-weight: bold}

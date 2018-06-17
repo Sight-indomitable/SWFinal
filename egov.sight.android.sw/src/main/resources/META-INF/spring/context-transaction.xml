@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd">
+    
+<!-- 	
+	<bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+	  <property name="dataSource" ref="dataSource"/>
+	</bean>
+
+	
+		
+			* 트랜잭션 설정  : 최고치 SERIALIZABLE 설절
+						  (dirty read , non-repeatable read, phantom read 모두 발생 가능)
+				mySQL의 기본값은 Level 1인 READ-COMMITTED,
+				오라클 DB의 경우 level 0 과 3을 지원하지않는데 스프링에서 설정하면..?
+	
+	<tx:advice id="txAdvice" transaction-manager="txManager">
+	   <tx:attributes>	   
+			<tx:method name         = "*" 
+			    	   propagation  = "REQUIRED"
+			    	   isolation    = "SERIALIZABLE" 
+			    	   rollback-for = "Exception"          />
+	   </tx:attributes>
+	</tx:advice>
+    
+	<aop:config>
+		<aop:pointcut id="requiredTx" expression="execution(* my..*Impl.*(..))"/>
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="requiredTx" />
+	</aop:config>
+	 -->
+</beans>

@@ -1,0 +1,20 @@
+@CHARSET "UTF-8";
+
+#postBbsWrap
+{
+	clear:both;
+	text-align:justify;
+	width:800px;
+	margin:0 auto;
+}
+
+#content
+{
+	width: 824px; 
+	height: 382px;
+}
+
+.submit
+{
+	text-align: right;
+}

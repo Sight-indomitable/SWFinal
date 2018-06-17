@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="bbs">
+    
+    <resultMap type="bbsVO" id="bbsResult">
+        <id     property="bbs_id"   column="bbs_id"  />
+        <result property="bbs_id"   column="bbs_id"  />
+		<result property="title"    column="title"   />
+		<result property="content"  column="content" />
+		<result property="user_id"  column="user_id"  />    
+    </resultMap>
+    
+	<insert id="insertBbs" parameterType="bbsVO">
+        insert into bbs
+        	(title, content, user_id)
+        values
+        	(#{title} , #{content} , #{user_id})
+    </insert>
+    
+	
+    <update id="updateBbs" parameterType="bbsVO">
+       update bbs        
+	   set	  
+	   		title = #{title},
+        	content = #{content}
+       where  
+       		bbs_id = #{bbs_id}
+    </update>
+	
+    <!-- 원래는 delete대신  테이블에 상태를 나타내는 컬럼을 주고 거기에 비활성화시키는 값을 줘야한다-->
+    <delete id="deleteBbs" parameterType="bbsVO">
+        delete from bbs
+        where
+        	bbs_id =#{bbs_id}
+        
+    </delete>
+    
+    <select id="selectBbs" parameterType="bbsVO" resultMap="bbsResult">
+        select bbs_id, title, content, user_id
+        from   bbs
+        where  bbs_id = #{bbs_id}
+    </select>
+	
+    
+    <select id="selectBbsList" parameterType="bbsVO" resultMap="bbsResult">
+    	select bbs_id, title, user_id
+        from bbs
+        where 1=1
+    </select> 
+    
+</mapper>

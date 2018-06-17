@@ -1,0 +1,37 @@
+@CHARSET "UTF-8";
+
+#index-wrap
+{
+	text-align:left;
+	width:800px;
+	margin:0 auto;
+}
+
+.myAlert
+{
+	font-family: 'Hanna', serif;	
+}
+
+#myCarousel-warp
+{
+	height:600px;
+}
+
+#myCarousel
+{
+	height:600px;
+}
+
+#myCarousel-warp img
+{
+	width:100%;
+	height:100%;	
+}
+
+
+
+.carousel-inner
+{
+	width:1250px;
+	height:600px; 
+}

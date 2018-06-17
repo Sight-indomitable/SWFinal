@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+  
+<configuration>		
+	
+    <typeAliases>
+        <!-- SW 프레익웍용 -->
+        <typeAlias type="my.sw.model.vo.BbsVO" alias="bbsVO"/>
+        <typeAlias type="my.sw.model.vo.UserVO" alias="userVO"/>
+        
+        <!-- SW 프레익웍용 -->
+        <typeAlias type="my.android.model.vo.ClientVO" alias="cliVO"/>
+    </typeAliases>
+    
+</configuration>
+
+
+

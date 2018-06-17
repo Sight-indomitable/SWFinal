@@ -1,0 +1,19 @@
+@CHARSET "UTF-8";
+
+#bbsListView-wrap
+{
+	text-align:justify;
+	width:900px;
+	margin:0 auto;
+}
+
+.my-info
+{
+	font-family: 'Hanna', serif;
+	font-size : 18px;
+}
+
+tbody tr
+{
+	cursor:pointer;
+}
